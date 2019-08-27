@@ -1,0 +1,26 @@
+body #bottom-content {
+    display: flex;
+    flex-direction: row;
+    font-size: 11px;
+    align-self: center;
+}
+
+body .new_title {
+    font-weight: bold;
+    font-size: 14px;
+    align-self: center;
+}
+
+body #bottom-content .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4px;
+    text-align: center;
+}
+
+body #bottom-content .info img {
+    width: 50px;
+    height: 50px;
+    margin: 8px;
+}

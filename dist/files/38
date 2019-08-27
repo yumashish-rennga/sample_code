@@ -1,0 +1,10 @@
+;(function() {
+  if (!window._adp) window._adp = [];
+  if (!window._adp.res) window._adp.res = {};
+  var obj = {"uid":"UQCpkgAuhQFDPmnq_LoVlWX_TfOLhtg2","cid":"1d605aab3f93c57e86dffbf3856db9e4","use1st":true,"useLocalStorage":false,"expires":"Sun, 15 Aug 2021 04:46:08 GMT","accountId":38,"eventId":"865b5fa8-260d-4e72-ab1b-943398336290"};
+  for (var k in obj) {
+    if (obj.hasOwnProperty(k)) {
+      window._adp.res[k] = obj[k];
+    }
+  }
+})();

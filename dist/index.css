@@ -1,0 +1,183 @@
+body main#str_main.main-content {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-bottom: 40px;
+    width: initial;
+}
+
+body main#str_main.main-content .plane {
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    animation-name: plane_logo;
+    animation-duration: 4s;
+    animation-fill-mode: forwards; 
+}
+
+body main#str_main.main-content .please_wait {
+    font-weight: bold;
+}
+
+body main#str_main.main-content .message {
+    width: 90%;
+    align-self: center;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+body .forgive_me {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-self: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    align-content: center;
+}
+
+body .dot_1 {
+    display: relative;
+    margin-left: 0px;
+    width: 16px;
+    height: 70px;
+    animation-name: dot_appear;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    opacity: 0;
+    animation-fill-mode: forwards; 
+}
+
+body .dot_2 {
+    display: relative;
+    margin-left: 0px;
+    width: 16px;
+    height: 70px;
+    margin-left: 8px;
+    animation-name: dot_appear;
+    animation-duration: 1s;
+    animation-delay: 0.75s;
+    opacity: 0;
+    animation-fill-mode: forwards; 
+}
+
+body .dot_3 {
+    display: relative;
+    margin-left: 0px;
+    width: 16px;
+    height: 70px;
+    margin-left: 8px;
+    animation-name: dot_appear;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    opacity: 0;
+    animation-fill-mode: forwards; 
+}
+
+body .dot_4 {
+    display: relative;
+    margin-left: 0px;
+    width: 16px;
+    height: 70px;
+    margin-left: 8px;
+    animation-name: dot_appear;
+    animation-duration: 1s;
+    animation-delay: 1.25s;
+    opacity: 0;
+    animation-fill-mode: forwards; 
+}
+
+body .dot_5 {
+    display: relative;
+    margin-left: 0px;
+    width: 16px;
+    height: 70px;
+    margin-left: 8px;
+    animation-name: dot_appear;
+    animation-duration: 1s;
+    animation-delay: 1.5s;
+    opacity: 0;
+    animation-fill-mode: forwards; 
+}
+
+body .dot_6 {
+    display: relative;
+    margin-left: 0px;
+    width: 16px;
+    height: 70px;
+    margin-left: 8px;
+    animation-name: dot_appear;
+    animation-duration: 1s;
+    animation-delay: 1.75s;
+    opacity: 0;
+    animation-fill-mode: forwards; 
+}
+
+body .dot_7 {
+    display: relative;
+    margin-left: 0px;
+    width: 16px;
+    height: 70px;
+    margin-left: 8px;
+    animation-name: dot_appear;
+    animation-duration: 1s;
+    animation-delay: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards; 
+}
+
+body .dot_8 {
+    display: relative;
+    margin-left: 0px;
+    width: 16px;
+    height: 70px;
+    margin-left: 8px;
+    animation-name: dot_appear;
+    animation-duration: 1s;
+    animation-delay: 2.25s;
+    opacity: 0;
+    animation-fill-mode: forwards; 
+}
+
+body .dot_9 {
+    display: relative;
+    margin-left: 0px;
+    width: 16px;
+    height: 70px;
+    margin-left: 8px;
+    animation-name: dot_appear;
+    animation-duration: 1s;
+    animation-delay: 2.5s;
+    margin-right: 75px;
+    opacity: 0;
+    animation-fill-mode: forwards; 
+}
+
+
+
+@keyframes plane_logo {
+    from {
+        right: 100%;
+    }
+    to {
+        right: 0%;
+    }
+}
+
+@keyframes dot_appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body dd.change_pc {
+    display: none;
+}
+
+body footer#page_footer {
+    margin-top: 0px;
+}

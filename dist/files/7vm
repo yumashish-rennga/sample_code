@@ -1,0 +1,72 @@
+var _adplanUid;
+
+_adplanUid = function() {
+	var getCookie = function(name) {
+		var cookie = document.cookie + ';';
+		name += '=';
+		var start = cookie.indexOf(name);
+		if(start == -1) return null;
+		start += name.length;
+		return unescape(cookie.substring(start, cookie.indexOf(';', start)));
+	};
+    	var uid = getCookie('_adplanUid');
+	return uid;
+};
+(function() {
+    var gc = function(c, k, v) { return c.match(' ' + k + '=([^;]+);') ? decodeURI(RegExp.$1) : v;};
+    var cc = function(k, v, e) { return k + '=' + encodeURI(v) + '; path=/; expires=' + e.toUTCString(); }
+    var c = ' ' + document.cookie + ';';
+    var u3 = '3014190326232647377631';
+    var u = (u3 != '' ? u3 : gc(c, '_adplanUid', ''));
+    var s = false && gc(c, 'syncImIsSynced', null) == null;
+
+    if(u != '' && s)
+    {
+        new Image(1,1).src = '//sync.im-apps.net/imid/set?cid=7476&tid=aid&uid=' + u;
+    }
+})();
+
+var _adplanPv = function(cfg) {
+	var urlencode = function (src) {
+		if(src == undefined || src == '') return src;
+		src = src.replace(/\xD7/g, "X");
+		src = src.replace(/\xA0/g, " ");
+		src = src.replace(/\xA9/g, "");
+		src = src.replace(/\xAE/g, "");
+		src = src.replace(/\xE9/g, "e");
+		return escape(src).replace(/\+/g, "%2B");
+	};
+
+	try {
+		if(!cfg.counter) return false;
+		if(!window.navigator.cookieEnabled) return false;
+
+		var doc = document;
+		try { if(parent.frames.length > 0) doc = top.document; } catch(e) {}
+
+		var title = cfg.title;
+		if(!title) { var obj = doc.getElementsByTagName('title'); if(obj && obj[0]) title = obj[0].text; }
+
+		var src = '//' + cfg.counter;
+		src += (src.indexOf('?') == -1 ? '?' : '&') + 'url=' + urlencode(doc.URL);
+		if(doc.referrer) src += '&ref=' + urlencode(doc.referrer);
+		if(cfg.key) src += '&page_key=' + urlencode(cfg.key);
+		if(title) src += '&page_title=' + urlencode(title);
+		if(cfg.adpv6_adtype) src += '&adpv6_adtype=' + urlencode(cfg.adpv6_adtype);
+		if(cfg.direct) src += '&direct=' + urlencode(cfg.direct);
+		if(_adplanUid) src += '&_uid1=' + _adplanUid();
+		src += '&_rand=' + Math.random();
+
+		var beacon = new Image(1,1);
+		beacon.src = src;
+	} catch(e) {
+	}
+};
+
+var _adplanPv$;
+if(_adplanPv$.length > 0) {
+	for (var i = 0; i < _adplanPv$.length; i ++) {
+		_adplanPv(_adplanPv$[i]);
+	}
+	_adplanPv$ = [];
+}
